@@ -1,25 +1,30 @@
 # keeneye
 
-This template should help get you started developing with Vue 3 in Vite.
+A quick'n'dirty Vue app used for our Masked Lands homebrew D&D Campaign. The Keeneyed Scavenger ability requires a lot of dice rolls and calculations. This simplifies things!
 
-## Recommended IDE Setup
+Here's the ability description straight from the docs:
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+### Keen-Eyed Scavenger 
+You tinker, and thus you have become skilled in identifying and recycling usable materials from both the environment and the belongings of former adversaries. 
 
-## Type Support for `.vue` Imports in TS
+#### *Effect*
+Whenever you loot a corpse or succeed on a skill check to search the environment for crafting materials, roll a D20(+Int) to get a value for X. You find (X/5) random materials, minimum 1 up to a total of 4. On crit, receive 5 materials of your choice. 
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+#### *Types of Materials*
+Types of Mechanical Components: Machine Part, Steel, Ignition Source, Precious Metal
+Types of Alchemical Ingredients: Natural Compound, Bio Matter, Organic Chemical, Rare Mineral
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+#### *Determining Random Materials*
+Roll a 1d20 for each ingredient found using Keen-Eyed Scavenger:
+- 1-3 Machine Part
+- 4-6; Steel
+- 7-8 Ignition Source
+- 9-10 Precious Metal
+- 11-13 Natural Compound 
+- 14-16 Bio Matter
+- 17-18 Organic Chemical
+- 19-20 Rare Mineral
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
@@ -38,3 +43,6 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Deployment
+Access the deployed version [here](https://keeneye.netlify.app/)!
